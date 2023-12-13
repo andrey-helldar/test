@@ -11,10 +11,7 @@ categories:
       - 'major'
   - title: 'Fixes'
     labels:
-      - 'fix'
-      - 'bugfix'
       - 'bug'
-      - 'BUG'
   - title: 'Changes'
     labels:
       - 'feature'
