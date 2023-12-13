@@ -1,21 +1,24 @@
 name-template: '$RESOLVED_VERSION'
 tag-template: '$RESOLVED_VERSION'
 change-template: '- $TITLE by @$AUTHOR (#$NUMBER)'
-category-template: '### $TITLE'
+category-template: '## $TITLE'
 
 sort-direction: 'ascending'
 
 categories:
-  - title: 'Breaking Changes'
+  - title: 'Added'
     labels:
-      - 'major'
-  - title: 'Fixes'
+      - 'added'
+  - title: 'Removed'
     labels:
+      - 'removed'
+  - title: 'Fixed'
+    labels:
+      - 'fix'
       - 'bug'
-  - title: 'Changes'
+  - title: 'Security'
     labels:
-      - 'feature'
-      - 'enhancement'
+      - 'security'
 
 exclude-labels:
   - 'skip-changelog'
@@ -30,11 +33,6 @@ version-resolver:
   default: patch
 
 template: |
-  ### Changed
+  ## Changed
 
   $CHANGES
-
-  ### Contributors
-  We'd like to thank all the contributors who worked on this release!
-
-  $CONTRIBUTORS
