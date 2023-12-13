@@ -3,9 +3,13 @@ tag-template: '$RESOLVED_VERSION'
 change-template: '- $TITLE by @$AUTHOR (#$NUMBER)'
 category-template: '## $TITLE'
 
+sort-by: 'title'
 sort-direction: 'ascending'
 
 categories:
+  - title: 'Machine'
+    labels:
+      - 'machine'
   - title: 'Added'
     labels:
       - 'added'
@@ -19,9 +23,12 @@ categories:
   - title: 'Security'
     labels:
       - 'security'
+      - 'security fix'
+      - 'security vulnerability'
 
 exclude-labels:
   - 'skip-changelog'
+  - 'dependencies'
 
 version-resolver:
   major:
