@@ -1,0 +1,43 @@
+name-template: '$RESOLVED_VERSION'
+tag-template: '$RESOLVED_VERSION'
+change-template: '- $TITLE by @$AUTHOR (#$NUMBER)'
+category-template: '### $TITLE'
+
+sort-direction: 'ascending'
+
+categories:
+  - title: 'Breaking Changes'
+    labels:
+      - 'major'
+  - title: 'Fixes'
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+      - 'BUG'
+  - title: 'Changes'
+    labels:
+      - 'feature'
+      - 'enhancement'
+
+exclude-labels:
+  - 'skip-changelog'
+
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  default: patch
+
+template: |
+  ### Changed
+
+  $CHANGES
+
+  ### Contributors
+  We'd like to thank all the contributors who worked on this release!
+
+  $CONTRIBUTORS
