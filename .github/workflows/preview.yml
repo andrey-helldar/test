@@ -23,6 +23,7 @@ jobs:
                 uses: TheDragonCode/github-preview-updater@v2
                 with:
                     readme: 'README_foo.md'
+                    config: '.github/preview-updater-foo.yml'
 
     bar:
         runs-on: ubuntu-latest
@@ -36,3 +37,4 @@ jobs:
                 uses: TheDragonCode/github-preview-updater@v2
                 with:
                     readme: 'README.bar.md'
+                    config: '.github/preview-updater-bar.yml'
