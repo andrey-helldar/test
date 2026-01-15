@@ -10,33 +10,33 @@ permissions:
 jobs:
     main:
         uses: TheDragonCode/.github/.github/workflows/preview.yml@main
-
-    foo:
-        runs-on: ubuntu-latest
-
-        steps:
-            -   uses: actions/checkout@v6
-                with:
-                    fetch-depth: 0
-
-            -   name: Update banner
-                uses: TheDragonCode/github-preview-updater@v2
-                with:
-                    token: ${{ secrets.GITHUB_TOKEN }}
-                    readme: 'README_foo.md'
-                    config: '.github/preview-updater-foo.yml'
-
-    bar:
-        runs-on: ubuntu-latest
-
-        steps:
-            -   uses: actions/checkout@v6
-                with:
-                    fetch-depth: 0
-
-            -   name: Update banner
-                uses: TheDragonCode/github-preview-updater@v2
-                with:
-                    token: ${{ secrets.GITHUB_TOKEN }}
-                    readme: 'README.bar.md'
-                    config: '.github/preview-updater-bar.yml'
+#
+#    foo:
+#        runs-on: ubuntu-latest
+#
+#        steps:
+#            -   uses: actions/checkout@v6
+#                with:
+#                    fetch-depth: 0
+#
+#            -   name: Update banner
+#                uses: TheDragonCode/github-preview-updater@v2
+#                with:
+#                    token: ${{ secrets.GITHUB_TOKEN }}
+#                    readme: 'README_foo.md'
+#                    config: '.github/preview-updater-foo.yml'
+#
+#    bar:
+#        runs-on: ubuntu-latest
+#
+#        steps:
+#            -   uses: actions/checkout@v6
+#                with:
+#                    fetch-depth: 0
+#
+#            -   name: Update banner
+#                uses: TheDragonCode/github-preview-updater@v2
+#                with:
+#                    token: ${{ secrets.GITHUB_TOKEN }}
+#                    readme: 'README.bar.md'
+#                    config: '.github/preview-updater-bar.yml'
