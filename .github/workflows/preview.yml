@@ -9,8 +9,18 @@ permissions:
 
 jobs:
     main:
-        uses: TheDragonCode/.github/.github/workflows/preview.yml@main
-#
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v6
+                with:
+                    fetch-depth: 0
+
+            -   name: Update banner
+                uses: TheDragonCode/github-preview-updater@main
+                with:
+                    token: ${{ secrets.GITHUB_TOKEN }}
+
 #    foo:
 #        runs-on: ubuntu-latest
 #
@@ -20,7 +30,7 @@ jobs:
 #                    fetch-depth: 0
 #
 #            -   name: Update banner
-#                uses: TheDragonCode/github-preview-updater@v2
+#                uses: TheDragonCode/github-preview-updater@main
 #                with:
 #                    token: ${{ secrets.GITHUB_TOKEN }}
 #                    readme: 'README_foo.md'
@@ -35,7 +45,7 @@ jobs:
 #                    fetch-depth: 0
 #
 #            -   name: Update banner
-#                uses: TheDragonCode/github-preview-updater@v2
+#                uses: TheDragonCode/github-preview-updater@main
 #                with:
 #                    token: ${{ secrets.GITHUB_TOKEN }}
 #                    readme: 'README.bar.md'
